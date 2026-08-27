@@ -92,7 +92,7 @@ const subjects2024 = [
   { id: 'E27', name: 'Teoría de circuitos 2', approved: false, equiv: 'Teoría de los Circuitos II' },
   { id: 'E28', name: 'Electrónica aplicada 2', approved: false, equiv: 'Electrónica Aplicada II' },
   { id: 'E29', name: 'Electromagnetismo aplicado', approved: false, equiv: 'Medios de Enlace' },
-  { id: 'E30', name: 'Dibujo asistido por PC', approved: false, equiv: 'Dibujo Asistido por Pc' },
+  { id: 'E30', name: 'Dibujo asistido por PC', approved: false, equiv: 'Dibujo Asistido por PC' },
   { id: 'E31', name: 'Diseño electrónico', approved: false, equiv: 'Electrónica Aplicada II' },
   { id: 'E32', name: 'Técnicas Digitales 3', approved: false, equiv: 'Técnicas Digitales II' },
   { id: 'E33', name: 'Principios de Comunicaciones Digitales', approved: false, equiv: 'Sistemas de Comunicaciones I' },
