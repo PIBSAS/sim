@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de transición INEL · Plan 2011 - 2024</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>🎛️ Simulador de transición entre planes INEL</h1>
+		  <p>
+			<strong>Basado en el simulador realizado en <a href="https://docs.google.com/spreadsheets/d/1uw1BbVpp26dK52EdCy5UUZaHLXIKGnPH/edit?usp=sharing&ouid=115607339912952976231&rtpof=true&sd=true" target="_blank">Excel</a> por Gabriel Venturino</strong>
+		  </p>
+		  <br>
+	  
+      <div class="stats-bar">
+        <div class="stat-card"><span class="label">✅ Aprobadas 2011</span> <span id="count2011">0</span></div>
+        <div class="stat-card"><span class="label">📘 Aprobadas 2024</span> <span id="count2024">0</span></div>
+        <div class="stat-card"><span class="label">⏳ Faltan aprobar (2024)</span> <span id="countFaltan">50</span></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="plan-panel" id="plan2011-panel">
+        <h2>📆 Plan 2011</h2>
+        <div class="sub-header">
+          <span>Asignatura</span>
+          <span>Estado</span>
+        </div>
+        <div id="plan2011-grid" class="subject-grid"></div>
+        <div class="plan-summary">
+          <span>Obligatorias aprobadas: <strong id="sumOblig">0</strong></span>
+          <span>Redes: <strong id="sumRedes">0</strong></span>
+          <span>Multimedia: <strong id="sumMultimedia">0</strong></span>
+          <span>Agro: <strong id="sumAgro">0</strong></span>
+          <span>Mayor orientación: <strong id="maxOrient">0</strong></span>
+        </div>
+		<div class="categoria-leyenda">
+		  <span><span class="color-box obligatoria"></span> Obligatorias (29)</span>
+		  <span><span class="color-box redes"></span> Redes (11)</span>
+		  <span><span class="color-box multimedia"></span> Multimedia (12)</span>
+		  <span><span class="color-box agro"></span> Agro (13)</span>
+		</div>
+      </section>
+
+      <section class="plan-panel" id="plan2024-panel">
+        <h2>📘 Plan 2024</h2>
+        <div class="sub-header">
+          <span>Asignatura</span>
+          <span>Equivalencia / estado</span>
+        </div>
+        <div id="plan2024-grid" class="subject-grid"></div>
+        <div class="plan-summary">
+          <span>Asignaturas aprobadas: <strong id="count2024detail">0</strong></span>
+          <span>Faltan aprobar: <strong id="countFaltanDetail">50</strong></span>
+        </div>
+      </section>
+    </main>
+
+	
+    <footer>
+	  <div class="footer-content">
+	  <a href="https://sites.google.com/view/proyectocampusunm/" target="_blank" title="Proyecto Campus UNM">
+		<img src="Logo.png" alt="Proyecto Campus UNM" class="footer-logo">
+		<div class="footer-text">
+		  <p>⚡ Seleccioná una materia del Plan 2011 y se iluminarán sus equivalentes.</p>
+		  <p class="footer-sub">Ingeniería en Electrónica - UNM</p>
+		</div>
+	  </div>
+	</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
