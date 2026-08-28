@@ -313,6 +313,33 @@ main {
   transform: rotate(90deg);
   color: #ff6b6b;
 }
+.video-section {
+  margin: 2rem 0 1rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+.video-section h3 {
+  font-size: 1.1rem;
+  color: #1a2e44;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.video-container iframe {
+  max-width: 90%;
+  width: 560px;
+  height: 315px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
 footer {
   margin-top: 2.4rem;
   border-top: 1px solid #e2e9f2;
@@ -394,6 +421,12 @@ footer {
     font-size: 1.6vw;
     padding: 0.2vh 1.5vw;
     bottom: 1.5vh;
+  }
+  .video-container iframe {
+    width: 100vw;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    max-width: 95vw;
   }
   .footer-text p {
     font-size: 0.6rem;
