@@ -309,3 +309,39 @@ function updateStats() {
 }
 
 render();
+
+document.addEventListener('DOMContentLoaded', function() {
+  const thumb = document.getElementById('diagramaThumb');
+  const overlay = document.getElementById('diagramaOverlay');
+  const closeBtn = document.getElementById('closeDiagrama');
+
+  if (thumb && overlay && closeBtn) {
+    // Abrir al hacer clic en la miniatura
+    thumb.addEventListener('click', function() {
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    // Cerrar al hacer clic en la X
+    closeBtn.addEventListener('click', function() {
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    // Cerrar al hacer clic fuera de la imagen
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Cerrar con tecla ESC
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+});

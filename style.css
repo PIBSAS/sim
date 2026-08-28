@@ -219,6 +219,100 @@ main {
   color: #0b2a47;
   font-weight: 700;
 }
+.diagrama-section {
+  margin: 2rem 0 1rem 0;
+  text-align: center;
+  width: 100vw;
+}
+.diagrama-section h3 {
+  font-size: 1.1rem;
+  color: #1a2e44;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+.diagrama-container {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  width: 70vw;
+  max-width: 70vw;
+  margin: 0 auto;
+}
+.diagrama-thumb {
+  width: 70vw;
+  height: auto;
+  border: 2px solid #e2e9f2;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: block;
+}
+.diagrama-thumb:hover {
+  transform: scale(1.02);
+  border-color: #4d8af0;
+  box-shadow: 0 6px 20px rgba(77, 138, 240, 0.2);
+}
+.diagrama-container .diagrama-thumb::after {
+  content: "Click para ampliar";
+  position: absolute;
+  bottom: 2vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 0.2vh 1vw;
+  border-radius: 20px;
+  font-size: 0.8vw;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.diagrama-container:hover .diagrama-thumb::after {
+  opacity: 1;
+}
+.diagrama-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh 2vw;
+}
+.diagrama-overlay.active {
+  display: flex;
+}
+.diagrama-full {
+  max-width: 95vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+.close-btn {
+  position: absolute;
+  top: 3vh;
+  right: 3vw;
+  color: white;
+  font-size: 4vw;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 10000;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  transform: rotate(90deg);
+  color: #ff6b6b;
+}
 footer {
   margin-top: 2.4rem;
   border-top: 1px solid #e2e9f2;
@@ -279,6 +373,27 @@ footer {
   .subject-grid {
     max-height: none;
     overflow: visible;
+  }
+  .diagrama-container {
+    width: 88vw;
+    max-width: 88vw;
+  }
+  .diagrama-thumb {
+    max-width: 88vw;
+  }
+  .diagrama-full {
+    max-width: 95vw;
+    max-height: 80vh;
+  }
+  .close-btn {
+    top: 2vh;
+    right: 4vw;
+    font-size: 6vw;
+  }
+  .diagrama-container .diagrama-thumb::after {
+    font-size: 1.6vw;
+    padding: 0.2vh 1.5vw;
+    bottom: 1.5vh;
   }
   .footer-text p {
     font-size: 0.6rem;
